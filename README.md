@@ -135,3 +135,42 @@ procedure Tform.EditDataTyping(Sender: TObject);
 begin
   TRICKFormat.New.FormatExtra('R$').CurrencyValue(Sender);
 end;</span></pre>
+
+<li><strong>How to use Brazil's CEP mask.</strong>: <br>
+
+<pre><span class="pl-k">uses</span>
+
+  RICK.Format;
+
+<span class="pl-k">implementation</span>
+
+procedure Tform.EditDataTyping(Sender: TObject);
+begin
+  TRICKFormat.New.CEP(Sender);
+end;</span></pre>
+
+<li><strong>How to use Brazil's Date mask.</strong>: <br>
+
+<pre><span class="pl-k">uses</span>
+
+  RICK.Format;
+
+<span class="pl-k">implementation</span>
+
+procedure Tform.EditDataTyping(Sender: TObject);
+begin
+  TRICKFormat.New.DateValue(Sender);
+end;</span></pre>
+
+<li><strong>How to use Brazil's Peso mask.</strong>: <br>
+
+<pre><span class="pl-k">uses</span>
+
+  RICK.Format;
+
+<span class="pl-k">implementation</span>
+
+procedure Tform.EditDataTyping(Sender: TObject);
+begin
+  TRICKFormat.New.Peso(Sender);
+end;</span></pre>
