@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A1942AAC-5F80-4777-A028-C7ECE0A641FF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="RICKFormat.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\Delphi\FMX\RICKFormat.Demo.exe">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RICKFormat">
+        <MSBuild Projects="RICKFormat.dproj"/>
+    </Target>
+    <Target Name="RICKFormat:Clean">
+        <MSBuild Projects="RICKFormat.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RICKFormat:Make">
+        <MSBuild Projects="RICKFormat.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RICKFormat_Demo">
+        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.exe"/>
+    </Target>
+    <Target Name="RICKFormat_Demo:Clean">
+        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.exe" Targets="Clean"/>
+    </Target>
+    <Target Name="RICKFormat_Demo:Make">
+        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.exe" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RICKFormat;RICKFormat_Demo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RICKFormat:Clean;RICKFormat_Demo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RICKFormat:Make;RICKFormat_Demo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
