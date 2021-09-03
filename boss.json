@@ -6,6 +6,6 @@
 	"mainsrc": "./src",
 	"projects": [],
 	"dependencies": {
-		"https://github.com/ricksolucoes/ricklibrarys": "^1.0.1"
+		"https://github.com/ricksolucoes/ricklibrarys": "^1.0.3"
 	}
 }

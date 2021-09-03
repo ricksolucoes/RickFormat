@@ -4,6 +4,7 @@ interface
 
 uses
   FMX.Edit,
+  FMX.Types,
 
   System.SysUtils,
 
@@ -43,6 +44,7 @@ implementation
 
 { TRICKFormat }
 
+
 function TRICKFormat.CEP(AValue: TObject): iRICKFormat;
 var
   LText: string;
@@ -59,6 +61,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.NumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -80,6 +83,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.NumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -106,6 +110,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.NumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -127,6 +132,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.NumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -153,6 +159,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.DecimalNumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -189,6 +196,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.NumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -228,6 +236,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.PhonePad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -249,6 +258,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.PhonePad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -272,6 +282,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.DecimalNumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;
@@ -290,6 +301,7 @@ begin
 
   if AValue is TEdit then
   begin
+    TEdit(AValue).KeyboardType:= TVirtualKeyBoardType.NumberPad;
     TEdit(AValue).Text := LText;
     TEdit(AValue).CaretPosition := TEdit(AValue).Text.Length;
   end;

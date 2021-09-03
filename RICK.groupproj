@@ -6,7 +6,7 @@
         <Projects Include="RICKFormat.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Samples\Delphi\FMX\RICKFormat.Demo.exe">
+        <Projects Include="Samples\Delphi\FMX\RICKFormat.Demo.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -27,13 +27,13 @@
         <MSBuild Projects="RICKFormat.dproj" Targets="Make"/>
     </Target>
     <Target Name="RICKFormat_Demo">
-        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.exe"/>
+        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.dproj"/>
     </Target>
     <Target Name="RICKFormat_Demo:Clean">
-        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.exe" Targets="Clean"/>
+        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.dproj" Targets="Clean"/>
     </Target>
     <Target Name="RICKFormat_Demo:Make">
-        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.exe" Targets="Make"/>
+        <MSBuild Projects="Samples\Delphi\FMX\RICKFormat.Demo.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
         <CallTarget Targets="RICKFormat;RICKFormat_Demo"/>
