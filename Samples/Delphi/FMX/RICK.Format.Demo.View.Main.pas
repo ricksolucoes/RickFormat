@@ -63,9 +63,9 @@ begin
     5 : LRICKFormat.FormatExtra('rj').StateRegistration(Sender);
     6 : LRICKFormat.CurrencyValue(Sender);
     7 : LRICKFormat.FormatExtra('R$').CurrencyValue(Sender);
-    8 : LRICKFormat.CEP(Sender);
+    8 : LRICKFormat.ZipCode(Sender);
     9 : LRICKFormat.DateValue(Sender);
-    10: LRICKFormat.Peso(Sender);
+    10: LRICKFormat.Weight(Sender);
     11: LRICKFormat.FormatExtra('##.###-###-####>###').Customized(Sender);
   end;
 

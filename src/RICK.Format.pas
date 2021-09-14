@@ -33,9 +33,9 @@ type
     function CNPJorCPF(AValue: TObject): iRICKFormat;
     function StateRegistration(AValue: TObject): iRICKFormat;
     function CurrencyValue(AValue: TObject): iRICKFormat;
-    function CEP(AValue: TObject): iRICKFormat;
+    function ZipCode(AValue: TObject): iRICKFormat;
     function DateValue(AValue: TObject): iRICKFormat;
-    function Peso(AValue: TObject): iRICKFormat;
+    function Weight(AValue: TObject): iRICKFormat;
     function Customized(AValue: TObject): iRICKFormat;
 
   end;
@@ -45,7 +45,7 @@ implementation
 { TRICKFormat }
 
 
-function TRICKFormat.CEP(AValue: TObject): iRICKFormat;
+function TRICKFormat.ZipCode(AValue: TObject): iRICKFormat;
 var
   LText: string;
 begin
@@ -269,7 +269,7 @@ begin
   Result := Self.Create;
 end;
 
-function TRICKFormat.Peso(AValue: TObject): iRICKFormat;
+function TRICKFormat.Weight(AValue: TObject): iRICKFormat;
 var
   LText: string;
 begin

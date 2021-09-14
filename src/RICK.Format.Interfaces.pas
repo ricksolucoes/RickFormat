@@ -14,9 +14,9 @@ type
     function CNPJorCPF(AValue: TObject): iRICKFormat;
     function StateRegistration(AValue: TObject): iRICKFormat;
     function CurrencyValue(AValue: TObject): iRICKFormat;
-    function CEP(AValue: TObject): iRICKFormat;
+    function ZipCode(AValue: TObject): iRICKFormat;
     function DateValue(AValue: TObject): iRICKFormat;
-    function Peso(AValue: TObject): iRICKFormat;
+    function Weight(AValue: TObject): iRICKFormat;
     function Customized(AValue: TObject): iRICKFormat;
   end;
 implementation
