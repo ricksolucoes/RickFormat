@@ -16,7 +16,7 @@
 $ boss install https://github.com/ricksolucoes/RickFormat
 ```
 - Manual Installation
-  - Download the RICKCheckConnection;
+  - Download the RickFormat;
   - Add the following folders to your project, in <em>Project &gt; Options &gt; Resource Compiler &gt; Directories and Conditionals &gt; Include file search path ``` ../RickFormat/src ```
 
  ## ⚡️ How to use the project
