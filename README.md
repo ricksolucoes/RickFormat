@@ -1,176 +1,148 @@
+[0]: https://github.com/ricksolucoes/boss "Site do BOOS"
+
 # RickFormat
 
-<p align="center">
-  <b>RickFormat</b> is a Delphi library created to be able to mask the edit as it is typed. Using delphi's Fluent Interface.<br> 
-</p>
+**RickFormat**  is a Delphi library created to be able to mask the edit as it is typed. Using delphi's Fluent Interface.
 
-<h2>⚙️ Install</h2>
-<p>*Pre-requisites Delphi FMX</p>
-<li><strong>Installation with BOSS</strong>: <br>
-<pre>$ boss install https://github.com/ricksolucoes/RickFormat</pre>
+## ⚙️ Pre-requisites
 
-<li><strong>Manual Installation</strong>: <br>
-Add the following folders to your project, in <em>Project &gt; Options &gt; Resource Compiler &gt; Directories and Conditionals &gt; Include file search path</em></li>
-<pre><code>../RickFormat/src</code></pre>
+1. Delphi FMX
+2. If you choose to use [BOOS][0] ```https://github.com/ricksolucoes/boss or https://github.com/HashLoad/boss```  the dependency manager, you will have the facility to install all frameworks that are [Pre-requisites](#pre-requisites) for the project.
 
-<h2>⚡️ How to use the project</h2>
-<pre><code>../RickFormat/src</code></pre>
+## 💻 Installation
 
-<li><strong>How to use custom mask.</strong>: <br>
+- By using BOOS
+```shell
+$ boss install https://github.com/ricksolucoes/RickFormat
+```
+- Manual Installation
+  - Download the RICKCheckConnection;
+  - Add the following folders to your project, in <em>Project &gt; Options &gt; Resource Compiler &gt; Directories and Conditionals &gt; Include file search path ``` ../RickFormat/src ```
 
-<pre><span class="pl-k">uses</span>
+ ## ⚡️ How to use the project
 
-  RICK.Format;
+  Example of using the **RICKLibrary**
 
-<span class="pl-k">implementation</span>
+- How to use custom mask
 
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.FormatExtra('##.###-###-####>###').Customized(Sender);
-end;</span></pre>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.FormatExtra('##.###-###-####>###').Customized(Sender);
+  end;
+```
 
-<li><strong>How to use Brazil's Telephone mask. Using the interface. </strong>: <br>
+- How to use Brazil's Telephone mask. Using the interface.
 
-<pre><span class="pl-k">uses</span>
-  RICK.Format,
-  RICK.Format.Interfaces;
+```delphi  
+  uses
+    RICK.Format,
+    RICK.Format.Interfaces;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  var
+    LRICKFormat: iRICKFormat;
+  begin
+    LRICKFormat:= TRICKFormat.New;
+    LRICKFormat.LandlinePhone(Sender);
+  end;
+```
+  
+- How to use Brazil's Mobile mask
 
-<span class="pl-k">implementation</span>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.Mobile(Sender);
+  end;
+```
+  
+- How to use Brazil's CNPJ mask
 
-procedure Tform.EditDataTyping(Sender: TObject);
-var
-  LRICKFormat: iRICKFormat;
-begin
-  LRICKFormat:= TRICKFormat.New;
-  LRICKFormat.LandlinePhone(Sender);
-end;</span></pre>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.CNPJ(Sender);
+  end;
+```
+- How to use Brazil's CPF mask
 
-<li><strong>How to use Brazil's Mobile mask. </strong>: <br>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.CPF(Sender);
+  end;
+```
+  
+- How to use Brazil's CPF or CNPJ mask
 
-<pre><span class="pl-k">uses</span>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.CNPJorCPF(Sender);
+  end;
+```
+  
+- How to use Brazil's State Registration mask
 
-  RICK.Format;
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.FormatExtra('rj').StateRegistration(Sender);
+  end;
+```
+  
+- How to use Brazil's Currency Value mask
 
-<span class="pl-k">implementation</span>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.CurrencyValue(Sender);
+  end;
+```
 
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.Mobile(Sender);
-end;</span></pre>
+- How to use Brazil's Zip Code mask
 
-<li><strong>How to use Brazil's CNPJ mask.</strong>: <br>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.ZipCode(Sender);
+  end;
+```
 
-<pre><span class="pl-k">uses</span>
+- How to use Brazil's Date mask
 
-  RICK.Format;
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.DateValue(Sender);
+  end;
+```
+  
+- How to use Brazil's Weight mask
 
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.CNPJ(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's CPF mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.CPF(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's CPF or CNPJ mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.CNPJorCPF(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's State Registration mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.FormatExtra('rj').StateRegistration(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's Currency Value mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.CurrencyValue(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's Currency value with acronym mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.FormatExtra('R$').CurrencyValue(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's CEP mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.CEP(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's Date mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.DateValue(Sender);
-end;</span></pre>
-
-<li><strong>How to use Brazil's Peso mask.</strong>: <br>
-
-<pre><span class="pl-k">uses</span>
-
-  RICK.Format;
-
-<span class="pl-k">implementation</span>
-
-procedure Tform.EditDataTyping(Sender: TObject);
-begin
-  TRICKFormat.New.Peso(Sender);
-end;</span></pre>
+```delphi  
+  uses
+    RICK.Format;
+  procedure Tform.EditDataTyping(Sender: TObject);
+  begin
+    TRICKFormat.New.Weight(Sender);
+  end;
+```
