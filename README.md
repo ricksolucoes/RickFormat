@@ -21,7 +21,7 @@ $ boss install https://github.com/ricksolucoes/RickFormat
 
  ## ⚡️ How to use the project
 
-  Example of using the **RICKLibrary**
+  Example of using the **RickFormat**
 
 - How to use custom mask
 
