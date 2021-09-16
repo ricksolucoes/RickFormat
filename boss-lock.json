@@ -2,10 +2,10 @@
 	"hash": "",
 	"updated": "2021-09-03T20:21:59.1782511-03:00",
 	"installedModules": {
-		"https://github.com/ricksolucoes/ricklibrarys": {
-			"name": "ricklibrarys",
-			"version": "1.0.2",
-			"hash": "e6f4a979564d625380865e9b29cb0ff6",
+		"https://github.com/ricksolucoes/ricklibrary": {
+			"name": "ricklibrary",
+			"version": "1.0.3",
+			"hash": "0ae177f1adf7cb8f5f482b78083f85fb",
 			"artifacts": {},
 			"failed": false,
 			"changed": false
