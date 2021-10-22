@@ -4,8 +4,8 @@
 	"installedModules": {
 		"https://github.com/ricksolucoes/ricklibrary": {
 			"name": "ricklibrary",
-			"version": "1.0.4",
-			"hash": "0caaadd04490cde1b6b8161b08c032f4",
+			"version": "1.0.5",
+			"hash": "df7361c26dbe7097da4859078abe8d27",
 			"artifacts": {},
 			"failed": false,
 			"changed": false

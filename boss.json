@@ -1,11 +1,11 @@
 {
 	"name": "RickFormat",
 	"description": "Automatic formatting of user-entered values (applying masks to edits) in Delphi FMX.",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"homepage": "",
 	"mainsrc": "./src",
 	"projects": [],
 	"dependencies": {
-		"https://github.com/ricksolucoes/ricklibrary": "^1.0.4"
+		"https://github.com/ricksolucoes/ricklibrary": "^1.0.5"
 	}
 }

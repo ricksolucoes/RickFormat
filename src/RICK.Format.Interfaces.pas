@@ -15,7 +15,7 @@ type
     function StateRegistration(AValue: TObject): iRICKFormat;
     function CurrencyValue(AValue: TObject): iRICKFormat;
     function ZipCode(AValue: TObject): iRICKFormat;
-    function DateValue(AValue: TObject): iRICKFormat;
+    function DateValue(AValue: TObject): iRICKFormat; overload;
     function Weight(AValue: TObject): iRICKFormat;
     function Customized(AValue: TObject): iRICKFormat;
   end;
